@@ -1,0 +1,67 @@
+/*
+Theme Name: Hideo
+Text Domain: hideo
+Version: 1.0.5
+Description: Hideo is a clean portfolio and blog theme with bold headings and subdued colors. It comes with 7 different theme styles and over 20 block patterns. Demo: https://andersnoren.se/themes/hideo/
+Tags: blog, portfolio, news, grid-layout, one-column, two-columns, three-columns, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, sticky-post, threaded-comments, translation-ready, block-styles, wide-blocks, full-site-editing, block-patterns
+Author: Anders Norén
+Author URI: https://andersnoren.se
+Theme URI: https://andersnoren.se/teman/hideo-wordpress-theme/
+License: GNU General Public License version 2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Requires PHP: 7.4
+Tested up to: 6.5
+*/
+
+body {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+a {
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.15em;
+}
+
+input, textarea {
+	color: inherit;
+	font: inherit;
+	letter-spacing: inherit;
+}
+
+::placeholder { 
+	color: var( --wp--preset--color--70 );
+}
+
+/* STRUCTURE */
+
+@media (max-width: 781px) {
+	:root:not(.editor-styles-wrapper) .site-header-desktop,
+	:root:not(.editor-styles-wrapper) .site-sidebar-col {
+		display: none !important;
+	}
+}
+
+@media (min-width: 782px) {
+	:root:not(.editor-styles-wrapper) .site-header {
+		display: none !important;
+	}
+}
+
+/* HELPER CLASSES */
+
+.hide-empty:empty { display: none !important; }
+
+/* BLOCK: QUOTE & PULLQUOTE */
+
+.is-style-has-quotation-mark:before,
+.wp-block-pullquote blockquote:before {
+	content: "“";
+	display: block;
+	font-family: "Open Sauce Two", ui-sans-serif, sans-serif;
+	font-size: clamp( 80px, 3em, 128px );
+	line-height: .8;
+	margin-left: -.05em;
+	margin-bottom: .3em;
+	max-height: .3em;
+}
