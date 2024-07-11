@@ -1,3 +1,0 @@
-.edit-post-visual-editor__post-title-wrapper > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
-	max-width: 100% !important;
-}
